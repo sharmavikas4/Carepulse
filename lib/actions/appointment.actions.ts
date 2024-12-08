@@ -119,9 +119,9 @@ export const sendSMSNotification = async (userId: string, content: string) => {
 //  UPDATE APPOINTMENT
 export const updateAppointment = async ({
   appointmentId,
+  appointment,
   userId,
   timeZone,
-  appointment,
   type,
 }: UpdateAppointmentParams) => {
   try {
