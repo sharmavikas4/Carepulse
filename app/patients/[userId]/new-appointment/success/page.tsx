@@ -45,10 +45,6 @@ const RequestSuccess = async ({
             We&apos;ll be in touch shortly to confirm.
           </p>
         </section>
-
-        <p className="text-dark-700">
-          We&apos;ll be in touch shortly to confirm.
-        </p>
         <section className="request-details text-dark-700">
           <p>Requested appointment details: </p>
           <div className="flex items-center gap-3">
