@@ -37,14 +37,19 @@ const RequestSuccess = async ({
             width={280}
             alt="success"
           />
-          <h2 className="header mb-6 max-w-[600px] text-center">
+          <h2 className="header mb-6 max-w-[600px] text-center text-dark-700">
             Your <span className="text-green-500">appointment request</span> has
             been successfully submitted!
           </h2>
-          <p>We&apos;ll be in touch shortly to confirm.</p>
+          <p className="text-dark-700">
+            We&apos;ll be in touch shortly to confirm.
+          </p>
         </section>
 
-        <section className="request-details">
+        <p className="text-dark-700">
+          We&apos;ll be in touch shortly to confirm.
+        </p>
+        <section className="request-details text-dark-700">
           <p>Requested appointment details: </p>
           <div className="flex items-center gap-3">
             <Image

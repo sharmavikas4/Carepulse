@@ -71,7 +71,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
           <Textarea
             placeholder={props.placeholder}
             {...field}
-            className="shad-textArea"
+            className="shad-textArea text-dark-700"
             disabled={props.disabled}
           />
         </FormControl>
@@ -86,7 +86,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
             withCountryCallingCode
             value={field.value as E164Number | undefined}
             onChange={field.onChange}
-            className="input-phone"
+            className="input-phone text-dark-700"
           />
         </FormControl>
       );
@@ -98,8 +98,12 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
               id={props.name}
               checked={field.value}
               onCheckedChange={field.onChange}
+              className="bg-dark-700"
             />
-            <label htmlFor={props.name} className="checkbox-label">
+            <label
+              htmlFor={props.name}
+              className="checkbox-label text-dark-700"
+            >
               {props.label}
             </label>
           </div>
@@ -113,7 +117,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
             height={24}
             width={24}
             alt="user"
-            className="ml-2"
+            className="ml-2 text-dark-700"
           />
           <FormControl>
             <ReactDatePicker
@@ -122,7 +126,7 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
               onChange={(date: Date) => field.onChange(date)}
               timeInputLabel="Time:"
               dateFormat={props.dateFormat ?? "MM/dd/yyyy"}
-              wrapperClassName="date-picker"
+              wrapperClassName="date-picker text-dark-700"
             />
           </FormControl>
         </div>
@@ -132,11 +136,11 @@ const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
         <FormControl>
           <Select onValueChange={field.onChange} defaultValue={field.value}>
             <FormControl>
-              <SelectTrigger className="shad-select-trigger">
+              <SelectTrigger className="shad-select-trigger text-dark-700">
                 <SelectValue placeholder={props.placeholder} />
               </SelectTrigger>
             </FormControl>
-            <SelectContent className="shad-select-content">
+            <SelectContent className="shad-select-content text-dark-700">
               {props.children}
             </SelectContent>
           </Select>

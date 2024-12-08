@@ -104,13 +104,13 @@ const RegisterForm = ({ user }: { user: User }) => {
         className="flex-1 space-y-12"
       >
         <section className="space-y-4">
-          <h1 className="header">Welcome 👋</h1>
+          <h1 className="header text-dark-700">Welcome 👋</h1>
           <p className="text-dark-700">Let us know more about yourself.</p>
         </section>
 
         <section className="space-y-6">
           <div className="mb-9 space-y-1">
-            <h2 className="sub-header">Personal Information</h2>
+            <h2 className="sub-header text-dark-700">Personal Information</h2>
           </div>
 
           {/* NAME */}
@@ -162,13 +162,17 @@ const RegisterForm = ({ user }: { user: User }) => {
               renderSkeleton={(field) => (
                 <FormControl>
                   <RadioGroup
-                    className="flex h-11 gap-6 xl:justify-between"
+                    className="flex h-11 gap-6 text-dark-700 xl:justify-between"
                     onValueChange={field.onChange}
                     defaultValue={field.value}
                   >
                     {GenderOptions.map((option, i) => (
                       <div key={option + i} className="radio-group">
-                        <RadioGroupItem value={option} id={option} />
+                        <RadioGroupItem
+                          className="bg-dark-700"
+                          value={option}
+                          id={option}
+                        />
                         <Label htmlFor={option} className="cursor-pointer">
                           {option}
                         </Label>
@@ -221,7 +225,7 @@ const RegisterForm = ({ user }: { user: User }) => {
 
         <section className="space-y-6">
           <div className="mb-9 space-y-1">
-            <h2 className="sub-header">Medical Information</h2>
+            <h2 className="sub-header text-dark-700">Medical Information</h2>
           </div>
 
           {/* PRIMARY CARE PHYSICIAN */}
@@ -234,7 +238,7 @@ const RegisterForm = ({ user }: { user: User }) => {
           >
             {Doctors.map((doctor, i) => (
               <SelectItem key={doctor.name + i} value={doctor.name}>
-                <div className="flex cursor-pointer items-center gap-2">
+                <div className="flex cursor-pointer items-center gap-2 text-dark-700">
                   <Image
                     src={doctor.image}
                     width={32}
@@ -308,7 +312,9 @@ const RegisterForm = ({ user }: { user: User }) => {
 
         <section className="space-y-6">
           <div className="mb-9 space-y-1">
-            <h2 className="sub-header">Identification and Verfication</h2>
+            <h2 className="sub-header text-dark-700">
+              Identification and Verfication
+            </h2>
           </div>
 
           <CustomFormField
@@ -348,7 +354,7 @@ const RegisterForm = ({ user }: { user: User }) => {
 
         <section className="space-y-6">
           <div className="mb-9 space-y-1">
-            <h2 className="sub-header">Consent and Privacy</h2>
+            <h2 className="sub-header text-dark-700">Consent and Privacy</h2>
           </div>
 
           <CustomFormField

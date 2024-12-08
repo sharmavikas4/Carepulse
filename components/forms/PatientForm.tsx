@@ -36,7 +36,7 @@ export const PatientForm = () => {
         email: values.email,
         phone: values.phone,
       };
-
+      console.log(user);
       const newUser = await createUser(user);
 
       if (newUser) {
@@ -44,16 +44,16 @@ export const PatientForm = () => {
       }
     } catch (error) {
       console.log(error);
+    } finally {
+      setIsLoading(false);
     }
-
-    setIsLoading(false);
   };
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="flex-1 space-y-6">
         <section className="mb-12 space-y-4">
-          <h1 className="header">Hi there 👋</h1>
+          <h1 className="header text-dark-700">Hi there 👋</h1>
           <p className="text-dark-700">Get started with appointments.</p>
         </section>
 
