@@ -1,5 +1,4 @@
 "use client";
-import { time } from "console";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
@@ -102,10 +101,7 @@ export const AppointmentForm = ({
             cancellationReason: values.cancellationReason,
           },
           type,
-          timeZone:
-            typeof time === "string"
-              ? time
-              : new Intl.DateTimeFormat().resolvedOptions().timeZone,
+          timeZone: new Intl.DateTimeFormat().resolvedOptions().timeZone,
         };
 
         const updatedAppointment = await updateAppointment(appointmentToUpdate);
